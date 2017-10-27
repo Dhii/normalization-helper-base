@@ -57,13 +57,13 @@ trait NormalizeIntCapableTrait
      *
      * @since [*next-version*]
      *
-     * @param Stringable|string|int|float|bool $value The value to normalize to string.
+     * @param Stringable|string|int|float|bool $subject The value to normalize to string.
      *
      * @throws InvalidArgumentException If the value cannot be normalized.
      *
      * @return string The string that resulted from normalization.
      */
-    abstract protected function _normalizeString($value);
+    abstract protected function _normalizeString($subject);
 
     /**
      * Creates a new invalid argument exception.
