@@ -21,7 +21,7 @@ trait NormalizeIntCapableTrait
      *
      * @since [*next-version*]
      *
-     * @param mixed $value The value to normalize.
+     * @param String|stringable|float|int $value The value to normalize.
      *
      * @throws InvalidArgumentException If value cannot be normalized.
      *
