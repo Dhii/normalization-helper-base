@@ -107,7 +107,7 @@ class NormalizeStringCapableTraitTest extends TestCase
         $_subject = $this->reflect($subject);
 
         $result = $_subject->_normalizeString($data);
-        $this->assertEquals($data, $result, 'The stringable was not normalized correctly');
+        $this->assertEquals($data, $result, 'The string was not normalized correctly');
     }
 
     /**
@@ -140,7 +140,7 @@ class NormalizeStringCapableTraitTest extends TestCase
         $_subject = $this->reflect($subject);
 
         $result = $_subject->_normalizeString($data);
-        $this->assertEquals((string) $data, $result, 'The stringable was not normalized correctly');
+        $this->assertEquals((string) $data, $result, 'The integer was not normalized correctly');
     }
 
     /**
@@ -155,7 +155,7 @@ class NormalizeStringCapableTraitTest extends TestCase
         $_subject = $this->reflect($subject);
 
         $result = $_subject->_normalizeString($data);
-        $this->assertEquals((string) $data, $result, 'The stringable was not normalized correctly');
+        $this->assertEquals((string) $data, $result, 'The float was not normalized correctly');
     }
 
     /**
@@ -170,7 +170,7 @@ class NormalizeStringCapableTraitTest extends TestCase
         $_subject = $this->reflect($subject);
 
         $result = $_subject->_normalizeString($data);
-        $this->assertEquals((string) $data, $result, 'The stringable was not normalized correctly');
+        $this->assertEquals((string) $data, $result, 'The boolean was not normalized correctly');
     }
 
     /**
