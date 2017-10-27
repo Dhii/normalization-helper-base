@@ -50,13 +50,18 @@ trait NormalizeIntCapableTrait
     }
 
     /**
-     * Normalize a value to its string representation.
+     * Normalizes a value to its string representation.
+     *
+     * The values that can be normalized are any scalar values, as well as
+     * {@see StringableInterface).
      *
      * @since [*next-version*]
      *
-     * @param mixed The value to normalize.
+     * @param Stringable|string|int|float|bool $value The value to normalize to string.
      *
-     * @return string The string representation of the value.
+     * @throws InvalidArgumentException If the value cannot be normalized.
+     *
+     * @return string The string that resulted from normalization.
      */
     abstract protected function _normalizeString($value);
 
