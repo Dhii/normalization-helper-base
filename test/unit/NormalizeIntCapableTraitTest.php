@@ -193,6 +193,13 @@ class NormalizeIntCapableTraitTest extends TestCase
     /**
      * Tests that `_normalizeInt()` method fails when normalizing a non-whole float with floating number overflow.
      *
+     * Float numbers with more than 12 or 14 decimal places (system-dependent) lose a lot of accuracy in PHP. This is
+     * especially true if all decimal digits prior to the 12th or 14th are zero, which results in the float behaving
+     * like an integer. In fact, the below test float shows "4" if outputted and acts as an integer 4 in calculations.
+     * However, PHP still reports such floats to be of type "float" when using gettype().
+     *
+     * This test ensures that the normalization rejects such a float.
+     *
      * @since [*next-version*]
      */
     public function testNormalizeFloatOverflow()
