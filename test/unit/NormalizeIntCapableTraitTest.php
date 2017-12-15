@@ -191,6 +191,21 @@ class NormalizeIntCapableTraitTest extends TestCase
     }
 
     /**
+     * Tests that `_normalizeInt()` method fails when normalizing a non-whole float with floating number overflow.
+     *
+     * @since [*next-version*]
+     */
+    public function testNormalizeFloatOverflow()
+    {
+        $data = 4.000000000000002;
+        $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+
+        $this->setExpectedException('InvalidArgumentException');
+        $result = $_subject->_normalizeInt($data);
+    }
+
+    /**
      * Tests that `_normalizeInt()` method fails when normalizing a boolean.
      *
      * @since [*next-version*]
