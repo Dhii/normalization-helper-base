@@ -26,6 +26,12 @@
             "Dhii\\Util\\Normalization\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Dhii\\Util\\Normalization\\UnitTest\\": "test/unit",
+            "Dhii\\Util\\Normalization\\FuncTest\\": "test/functional"
+        }
+    },
     "scripts": {
         "test": "phpunit",
         "csfix": "php-cs-fixer fix -vvv"
