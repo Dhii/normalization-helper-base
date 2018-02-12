@@ -5,6 +5,7 @@ namespace Dhii\Util\Normalization;
 use Dhii\Util\String\StringableInterface as Stringable;
 use Exception as RootException;
 use InvalidArgumentException;
+use stdClass;
 use Traversable;
 
 /**
@@ -19,7 +20,7 @@ trait NormalizeArrayCapableTrait
      *
      * @since [*next-version*]
      *
-     * @param array|Traversable $value The value to normalize.
+     * @param array|stdClass|Traversable $value The value to normalize.
      *
      * @throws InvalidArgumentException If value cannot be normalized.
      *
@@ -27,6 +28,10 @@ trait NormalizeArrayCapableTrait
      */
     protected function _normalizeArray($value)
     {
+        if ($value instanceof stdClass) {
+            $value = (array) $value;
+        }
+
         if (is_array($value)) {
             return $value;
         }
