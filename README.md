@@ -8,4 +8,15 @@
 
 Functionality for normalizing values.
 
+## Traits
+- [`NormalizeArrayCapableTrait`][NormalizeArrayCapableTrait] - Normalize something iterable into an array.
+- [`NormalizeIntCapableTrait`][NormalizeIntCapableTrait] - Normalize a number representation into an integer.
+- [`NormalizeIterableCapableTrait`][NormalizeIterableCapableTrait] - Normalize a value to something iterable.
+- [`NormalizeStringCapableTrait`][NormalizeStringCapableTrait] - Normalize a string representation into a string.
+
 [Dhii]: https://github.com/Dhii/dhii
+
+[NormalizeArrayCapableTrait]:                           src/NormalizeArrayCapableTrait.php
+[NormalizeIntCapableTrait]:                             src/NormalizeIntCapableTrait.php
+[NormalizeIterableCapableTrait]:                        src/NormalizeIterableCapableTrait.php
+[NormalizeStringCapableTrait]:                          src/NormalizeStringCapableTrait.php
