@@ -1,4 +1,5 @@
 <?php
+
 namespace Dhii\Util\Normalization;
 
 use InvalidArgumentException;
