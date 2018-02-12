@@ -133,6 +133,26 @@ class NormalizeArrayCapableTraitTest extends TestCase
     }
 
     /**
+     * Tests that `_normalizeArray()` method works as expected when normalizing an `stdClass` instance.
+     *
+     * @since [*next-version*]
+     */
+    public function testNormalizeArrayStdClass()
+    {
+        $data = [
+            uniqid('key') => uniqid('val'),
+            uniqid('key') => uniqid('val'),
+            uniqid('key') => uniqid('val'),
+        ];
+        $iterable = (object) $data;
+        $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+
+        $result = $_subject->_normalizeArray($iterable);
+        $this->assertEquals($data, $result, 'The array was not normalized correctly');
+    }
+
+    /**
      * Tests that `_normalizeArray()` method works as expected when normalizing a {@see Traversable}.
      *
      * @since [*next-version*]
