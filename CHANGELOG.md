@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [[*next-version*]] - YYYY-MM-DD
 
+## [0.1-alpha4] - 2018-06-04
+### Changed
+- `NormalizeStringableCapableTrait#_normalizeStringable()` is now `protected`.
+
 ## [0.1-alpha3] - 2018-06-04
 ### Added
 - `NormalizeStringableCapableTrait`.
