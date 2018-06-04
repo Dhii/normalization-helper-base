@@ -29,7 +29,7 @@ trait NormalizeStringableCapableTrait
      * @return Stringable|string|int|float|bool The normalized stringable.
      *                                          If the original value was stringable, that same value will be returned without any modification.
      */
-    public function _normalizeStringable($stringable)
+    protected function _normalizeStringable($stringable)
     {
         if (!is_scalar($stringable)
             && !($stringable instanceof Stringable)
